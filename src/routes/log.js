@@ -15,7 +15,7 @@ router.post("/logs", (req, res) => {
 router.get("/logs", (req, res) => {
   logSchema
     .find()
-    .then((data) => res.json(data))
+    .then((data) => res.json({ data: [data] }))
     .catch((error) => res.json({ message: error }));
 });
 
