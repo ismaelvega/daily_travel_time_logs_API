@@ -3,7 +3,7 @@ const router = express.Router();
 const logSchema = require("../models/log");
 
 // create log
-router.post("/logs", (req, res) => {
+router.post("/createLog", (req, res) => {
   const log = logSchema(req.body);
   log
     .save()

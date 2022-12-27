@@ -5,14 +5,42 @@ const logSchema = mongoose.Schema({
     type: String,
     required: true
   },
-  time: {
+  day: {
     type: String,
     required: true
   },
-  logType: {
+  leftAt: {
     type: String,
-    required: true
-  }
+    required: false
+  },
+  pickedUpAt: {
+    type: String,
+    required: false
+  },
+  arrivedAt: {
+    type: String,
+    required: false
+  },
+  atBus: {
+    type: String,
+    required: false
+  },
+  busArrivedAt: {
+    type: String,
+    required: false
+  },
+  atSubway: {
+    type: String,
+    required: false
+  },
+  subwayArrivedAt: {
+    type: String,
+    required: false
+  },
+  atWork: {
+    type: String,
+    required: false
+  },
 })
 
 module.exports = mongoose.model('Log', logSchema)
